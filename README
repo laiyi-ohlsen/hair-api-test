@@ -1,0 +1,20 @@
+# Requirements
+
+- You should be able to describe what your web service does in one sentence.
+- Your source code must be on Github.
+- Your web service should run an [Express](https://expressjs.com) application.
+- Your web service should use at least one more external npm package. Follow the guidelines on [Adding External Node Packages ](https://www.notion.so/Adding-External-Node-Packages-0cab0a1a413849618efec13a029b983c?pvs=21)  when looking for packages.
+- Your web service should accept at least one parameter, either via a query string, url parameter, or post data.
+    - e.g. query string - `127.0.0.1:3001?firstName=LaiYi&lastName=Ohlsen`
+    - e.g. url parameter - `127.0.0.1:3001/firstName/:LaiYi/lastName/:Ohlsen`
+- Your web service should output at least five different values based on the parameter received.
+    - e.g. `127.0.0.1:3001?firstName=LaiYi&lastName=Ohlsen` returns a description of Lai Yi , `127.0.0.1:3001?firstName=Tench&lastName=Cholnoky` returns a description of Tench and so on
+- Your github repo should include a Readme file that describes how to use your web service
+    - e.g. Describe what inputs are needed to get a photo of a person
+- Your web service should be published on [Render](http://render.com) (via the free plan).
+
+Project Idea:
+
+I am going to do hair colors for my web service, so every different hair color will be signaled by different styles. 
+
+- 
