@@ -1,6 +1,6 @@
 import express from 'express'
 
-const sentence = require('txtgen')
+import {sentence} from 'txtgen'
 
 let color = ['red, orange, yellow, green, teal, blue, brown, black, pink, purple']
 
@@ -55,35 +55,20 @@ app.get('/textgen', (req,res) => {
     const randomSentence = sentence();
     res.send(randomSentence)
 })
-
-res.json({ data: "response goes here"})
-
 const port = process.env.PORT || 3001
 
 app.get('/', (req, res) => {
     let matchingHair = [];
 
     Object.keys(hair).forEach((key, value) => {
+        if(req.query.style == hair[key].style){
+            matchingHair.push(key)
+        }
         if(req.query.color == hair[key].color){
             matchingHair.push(key)
         }
     })
-
     res.send(matchingHair) 
-
-
-
-
-
-
-    // if(req.query.letter =="S"){
-    //     names.forEach(color => {
-    //         if(color.includes("H") || color.includes("h")) {
-    //             console.log(color)
-    //             matches.push(color)
-    //         }
-    //     })
-    // }
 })
 
 app.get('/hair/:hair',(req,res) => {
