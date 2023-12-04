@@ -2,6 +2,12 @@ import express from 'express'
 
 import {sentence} from 'txtgen'
 
+import cors from 'cors'
+
+app.use(cors({
+    origin: '*'
+}));
+
 let color = ['red, orange, yellow, green, teal, blue, brown, black, pink, purple']
 
 let hair = {
