@@ -4,9 +4,7 @@ import {sentence} from 'txtgen'
 
 import cors from 'cors'
 
-app.use(cors({
-    origin: '*'
-}));
+
 
 let color = ['red, orange, yellow, green, teal, blue, brown, black, pink, purple']
 
@@ -56,6 +54,10 @@ let hair = {
 
 const app = express()
 app.use(express.json())
+
+app.use(cors({
+    origin: '*'
+}));
 
 app.get('/textgen', (req,res) => {
     const randomSentence = sentence();
