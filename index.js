@@ -80,14 +80,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/hair/:hair',(req,res) => {
-    let hair; 
+    let hairName; 
 
     Object.keys(hair).forEach((key,value) => {
         if (req.params.hair.substring(1) == key){
-            hair = hair[key]
+            hairName = hair[key]
         }
     })
-    res.send(hair)
+    res.send(hairName)
 })
 
 app.listen(port, () => {
